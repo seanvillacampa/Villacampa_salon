@@ -12,6 +12,7 @@ class Booking extends Model
 
     'service_id',
     'customer_name',
+    'contact_number', 
     'date_schedule',
     'time_schedule'
 

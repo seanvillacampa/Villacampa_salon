@@ -17,20 +17,25 @@
 <div class="card">
   <div class="card-header">
     
-<ul class="nav nav-tabs">
-  <li class="nav-item">
-    <a class="nav-link" href="/services">Services</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="/bookings">Bookings</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="/payments">Payments</a>
-  </li>
-    <li class="nav-item">
-    <a class="nav-link" href="/paymenthistory">Payment History</a>
-  </li>
-</ul>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('dashboard') ? 'active' : '' }}" href="/dashboard">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('services') ? 'active' : '' }}" href="/services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('bookings') ? 'active' : '' }}" href="/bookings">Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('payments') ? 'active' : '' }}" href="/payments">Payments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('paymenthistory') ? 'active' : '' }}" href="/paymenthistory">Payment History</a>
+                    </li>
+                </ul>
+            </div>
 
   </div>
   <div class="card-body">
@@ -69,7 +74,7 @@
                             <td>
                                 <form action="{{ route('payments.markAsPaid', $booking->id) }}"
                                       method="POST"
-                                      onsubmit="return confirm('Mark this booking as paid?')">
+                                  >
                                     @csrf
                                     <button type="submit" class="btn btn-success btn-sm">
                                         Mark as Paid

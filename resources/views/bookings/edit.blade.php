@@ -32,6 +32,11 @@
   <span class="input-group-text" id="inputGroup-sizing-default">Customer Name: </span>
   <input value="{{ $book->customer_name }}" name="b_customer_name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
 </div>
+
+<div class="input-group mb-3">
+  <span class="input-group-text">Contact Number: </span>
+  <input name="b_contact_number" type="tel" class="form-control" value="{{ $book->contact_number }}">
+</div>
     
 <div class="input-group mb-3">
 <select name="service_id" class="btn btn-outline-secondary dropdown-toggle" >

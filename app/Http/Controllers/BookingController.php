@@ -23,6 +23,7 @@ class BookingController extends Controller
 
     "service_id"=>$request->service_id,
     "customer_name" => $request -> b_customer_name,
+    "contact_number"  => $request->b_contact_number,
     "date_schedule"=>$request->b_date_schedule,
     "time_schedule"=>$request->b_time_schedule
 
@@ -52,6 +53,7 @@ class BookingController extends Controller
 
     "service_id"=>$request->service_id,
     "customer_name" => $request -> b_customer_name,
+    "contact_number"  => $request->b_contact_number,
     "date_schedule"=>$request->b_date_schedule,
     "time_schedule"=>$request->b_time_schedule,
 

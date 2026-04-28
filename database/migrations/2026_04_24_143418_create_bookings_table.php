@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('service_id');
             $table->string('customer_name');
+            $table->string('contact_number');
             $table->date('date_schedule');
             $table->time('time_schedule');
             $table->timestamps();
